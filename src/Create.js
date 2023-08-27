@@ -6,6 +6,7 @@ const Create = () => {
     const [body, setBody] = useState(""); // Add state for content
     const [author, setAuthor] = useState(""); 
     const [ispending, setIspending] = useState(false);
+    
     const history = useNavigate();
 
     const  handleSubmit=(event)=>
@@ -49,16 +50,15 @@ const Create = () => {
                         setBody(event.target.value);
                     }}
                 ></textarea>
-                <label>Blog Author:</label>
-                <select
-                value={author}
-                onChange={(event)=>
-                {
-                    setAuthor(event.target.value)
-                }}>
-                    <option value="Hari">Hari</option>
-                    <option value="Sathish">Sathish</option>
-                </select>
+                 <label>Blog Author:</label>
+                <input 
+                    type="text" 
+                    required
+                    value={author}
+                    onChange={(event) => {
+                        setAuthor(event.target.value);
+                    }}
+                />
                 {!ispending && <button>Add Blog</button>}
                 {ispending && <button disabled>Adding...</button>}
             </form>

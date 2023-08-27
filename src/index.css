@@ -1,105 +1,181 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
 
-/* base styles */
+/* Base styles */
 * {
   margin: 0;
-  font-family: "Quicksand";
-  color: #09050f;
-  background-color: rgb(217, 217, 216);
- 
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+
 }
+
+body {
+
+
+  font-family: "Quicksand", sans-serif;
+  background-size: cover;
+  background-position: center;
+ 
+ 
+  background-image: linear-gradient( #e2c2d9, #ddddef, #dec1d9);
+  color: #333;
+}
+
+/* Navbar */
 .navbar {
+  background-color:#b130a9;
+  color: #fff;
   padding: 20px;
   display: flex;
   align-items: center;
-  max-width: 600px;
-  margin: 0 auto;
-  border-bottom: 1px solid #f2f2f2;
-  border-color: #ffffff;
 }
+
 .navbar h1 {
-  color: #fe00c7;
-  font-weight:700;
-  
+  font-weight: 700;
+  font-size: 28px;
+  margin-right: auto;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
-.navbar .links {
-  margin-left: auto;
-}
+
 .navbar a {
-  margin-left: 16px;
+ 
+  font-weight: bold;
   text-decoration: none;
-  padding: 6px;
+  margin-left: 20px;
+  transition: color 0.3s ease-in-out;
+  border: 2px solid rgb(249, 249, 249);
+  border-radius: 5px;
+  padding: 4px;
+  color: #ffffff;
+  background-color:#b130a9;
 }
+
 .navbar a:hover {
-  color: #ff1158;
+  color: #b130a9;
+  background-color: #ffffff;
 }
+
+/* Content */
 .content {
-  max-width: 600px;
+  max-width: 800px;
   margin: 40px auto;
   padding: 20px;
+  background-color: #ffffff;
+  box-shadow:2px 2px 4px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
 }
 
-.blog-preview{
-
-    padding: 10px 16px;
-    margin: 20px 0;
-    border-bottom: 1px solid #fafafa;
+/* Blog Previews */
+.blog-preview {
+  padding: 20px;
+  margin: 20px 0;
+  background-color: #f7cfee;
+  box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
+
 .blog-preview:hover {
-    box-shadow: 1px 3px 5px rgba(0,0,0,0.5);
+  transform: translateY(-5px);
+  box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2);
 }
 
 .blog-preview h2 {
-    font-size: 20px;
-    color: #dd215a;
-    margin-bottom:8px ;
+  font-size: 24px;
+
+  color: #e91538;
+  margin-bottom: 10px;
+  font-family:'Franklin', Arial, sans-serif;
+  
 }
-.blog-preview a{
-  text-decoration: none;
+
+.blog-preview p {
+  color: #000000;
+  font-weight: 550;
 }
-.blog-details button {
-  background: #f1356d;
-  color: #fff;
-  border: 0;
-  padding: 8px;
-  border-radius: 8px;
-  cursor: pointer;
-}
-.blog-details div {
+
+/* Blog Details */
+.blog-details {
   margin: 20px 0;
 }
-.blog-details h2{
-  font-size: 20px;
-  color: #dd215a;
-  margin-bottom: 10px;
+
+.blog-details h2 {
+  font-size: 28px;
+  font-family: 'Franklin', Arial, sans-serif;
+  color: #e91538;
+  margin-bottom: 12px;
 }
-.create {
-  max-width: 400px;
-  margin: 0 auto;
-  text-align: center;
-}
-.create label {
-  text-align: left;
-  display: block;
-}
-.create h2 {
-  font-size: 20px;
-  color: #f1356d;
-  margin-bottom: 30px;
-}
-.create input, .create textarea, .create select {
-  width: 100%;
-  padding: 6px 10px;
-  margin: 10px 0;
-  border: 1px solid #575151;
-  box-sizing: border-box;
-  display: block;
-}
-.create button {
-  background: #f1356d;
+
+.blog-details button {
+  margin-top: 20px;
+  background-color:#f21414;
   color: #fff;
-  border: 0;
-  padding: 8px;
+  border: none;
+  padding: 10px 20px;
   border-radius: 8px;
   cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.blog-details button:hover {
+  background-color: #c111b5;
+}
+
+/* Create Form */
+.create {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 30px;
+  background-color: #f6ccf1;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.create label {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.create h2 {
+  font-size: 28px;
+  color: #f82e2e;
+  margin-bottom: 20px;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.create input,
+.create textarea,
+.create select {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.create button {
+  background-color: #ff3838;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.create button:hover {
+  background-color: #c01cba;
+}
+
+.blog-body {
+  margin-top: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: justify;
+  font-weight: 100;
+}
+
+.blog-author {
+  font-size: 20px;
+  font-weight: 550;
 }
